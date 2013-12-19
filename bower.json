@@ -1,0 +1,26 @@
+{
+  "name": "xmas",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ivanStraltsou/xmas",
+  "authors": [
+    "ivanStraltsou <ivan_straltsou@epam.com>"
+  ],
+  "main": "Gruntfile.js",
+  "keywords": [
+    "xmas"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pace": "~0.4.11",
+    "jquery": "~2.0.3",
+    "jquery-snowfall": "*"
+  }
+}

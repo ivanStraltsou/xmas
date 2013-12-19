@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Greetings</title>
+  <link href='stylesheets/style.min.css' rel='stylesheet' type='text/css'/>
+</head>
+<body>
+<section class="container">
+  <div class="header">
+    <div class="ribbon">
+      <div class="ribbon-stitches-top collectonme"></div>
+      <strong class="ribbon-content">
+        <h1 class="ribbon-content-title">Greetings to <%=year%></h1>
+      </strong>
+      <div class="ribbon-stitches-bottom collectonme"></div>
+    </div>
+  </div>
+  <div class="card collectonme">
+    <h1 class="card-title">We are so happy!</h1>
+
+    <div class="card-mittens"></div>
+    <a id="prev" class="card-nav prev btn" data-direction="left" href=""></a>
+    <a id="next" class="card-nav next btn" data-direction="right" href=""></a>
+
+    <div id='slider' class='swipe'>
+      <ul>
+        <li class="card-team-member" data-id="p1">
+          <figure class="ctm-photo">
+            <div class="ctm-photo-mask"><img class="ctm-photo-mask-inner" src="images/is.jpg" height=256 title="team"/></div>
+          </figure>
+          <figcaption class="ctm-photo-descr">
+            <span class="ctm-congr-text">"We wish you a Merry Christmas and happy New Year!"</span>
+          </figcaption>
+        </li>
+        <li class="card-team-member" data-id="p2">
+          <figure class="ctm-photo">
+            <div class="ctm-photo-mask">
+              <img class="ctm-photo-mask-inner" src="images/is.jpg" height=260 width=180 title="photo"/></div>
+          </figure>
+          <figcaption class="ctm-photo-descr">
+            <p class="ctm-photo-descr__item">XXX1</p>
+          </figcaption>
+        </li>
+        <li class="card-team-member" data-id="p3">
+          <figure class="ctm-photo">
+            <div class="ctm-photo-mask"><img class="ctm-photo-mask-inner" src="images/is.jpg" height=210 title="photo"/></div>
+          </figure>
+          <figcaption class="ctm-photo-descr">
+            <p class="ctm-photo-descr__item">XXX2</p>
+          </figcaption>
+        </li>
+        <li class="card-team-member" data-id="p4">
+          <figure class="ctm-photo">
+            <div class="ctm-photo-mask"><img class="ctm-photo-mask-inner" src="images/is.jpg" height=180 title="photo"/></div>
+          </figure>
+          <figcaption class="ctm-photo-descr">
+            <p class="ctm-photo-descr__item">XXX3</p>
+          </figcaption>
+        </li>
+        <li class="card-team-member" data-id="p5">
+          <figure class="ctm-photo">
+            <div class="ctm-photo-mask"><img class="ctm-photo-mask-inner" src="images/is.jpg" height=194 title="photo"/></div>
+          </figure>
+          <figcaption class="ctm-photo-descr">
+            <p class="ctm-photo-descr__item">XXX4</p>
+          </figcaption>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <nav class="nav">
+    <ul id="cardPagination">
+      <li id="p1" class="item g-active" data-page="0">
+        <img class="person-img" src="images/is.jpg"/>
+      </li>
+      <li id="p2" class="item" data-page="1">
+        <img class="person-img" src="images/is.jpg"/>
+      </li>
+      <li id="p3" class="item" data-page="2">
+        <img class="person-img" src="images/is.jpg"/>
+      </li>
+      <li id="p4" class="item" data-page="3">
+        <img class="person-img" src="images/is.jpg"/>
+      </li>
+      <li id="p5" class="item" data-page="4">
+        <img class="person-img" src="images/is.jpg"/>
+      </li>
+    </ul>
+  </nav>
+  <div class="snowglobe"></div>
+  <!--<audio src="/files/asd.mp3" loop autoplay></audio>-->
+</section>
+<script src='javascripts/core.js'></script>
+<script src="javascripts/main.js"></script>
+</body>
+</html>
