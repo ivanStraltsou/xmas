@@ -27,67 +27,26 @@
 
     <div id='slider' class='swipe'>
       <ul>
-        <li class="card-team-member" data-id="p1">
-          <figure class="ctm-photo">
-            <div class="ctm-photo-mask"><img class="ctm-photo-mask-inner" src="images/is.jpg" height=256 title="team"/></div>
-          </figure>
-          <figcaption class="ctm-photo-descr">
-            <span class="ctm-congr-text">"We wish you a Merry Christmas and happy New Year!"</span>
-          </figcaption>
-        </li>
-        <li class="card-team-member" data-id="p2">
-          <figure class="ctm-photo">
-            <div class="ctm-photo-mask">
-              <img class="ctm-photo-mask-inner" src="images/is.jpg" height=260 width=180 title="photo"/></div>
-          </figure>
-          <figcaption class="ctm-photo-descr">
-            <p class="ctm-photo-descr__item">XXX1</p>
-          </figcaption>
-        </li>
-        <li class="card-team-member" data-id="p3">
-          <figure class="ctm-photo">
-            <div class="ctm-photo-mask"><img class="ctm-photo-mask-inner" src="images/is.jpg" height=210 title="photo"/></div>
-          </figure>
-          <figcaption class="ctm-photo-descr">
-            <p class="ctm-photo-descr__item">XXX2</p>
-          </figcaption>
-        </li>
-        <li class="card-team-member" data-id="p4">
-          <figure class="ctm-photo">
-            <div class="ctm-photo-mask"><img class="ctm-photo-mask-inner" src="images/is.jpg" height=180 title="photo"/></div>
-          </figure>
-          <figcaption class="ctm-photo-descr">
-            <p class="ctm-photo-descr__item">XXX3</p>
-          </figcaption>
-        </li>
-        <li class="card-team-member" data-id="p5">
-          <figure class="ctm-photo">
-            <div class="ctm-photo-mask"><img class="ctm-photo-mask-inner" src="images/is.jpg" height=194 title="photo"/></div>
-          </figure>
-          <figcaption class="ctm-photo-descr">
-            <p class="ctm-photo-descr__item">XXX4</p>
-          </figcaption>
-        </li>
+        <% for (var i = 0; i < cards.length; i++) { %>
+          <li class="card-team-member" data-id="p<%= i + 1%>">
+            <figure class="ctm-photo">
+              <div class="ctm-photo-mask"><img class="ctm-photo-mask-inner" src="images/person/<%= cards[i].photo%>.jpg" title="<%= cards[i].photo%>"/></div>
+            </figure>
+            <figcaption class="ctm-photo-descr">
+              <p class="ctm-congr-text <%= cards[i].className%>"><%- cards[i].message%></p>
+            </figcaption>
+          </li>
+        <% } %>
       </ul>
     </div>
   </div>
   <nav class="nav">
     <ul id="cardPagination">
-      <li id="p1" class="item g-active" data-page="0">
-        <img class="person-img" src="images/is.jpg"/>
-      </li>
-      <li id="p2" class="item" data-page="1">
-        <img class="person-img" src="images/is.jpg"/>
-      </li>
-      <li id="p3" class="item" data-page="2">
-        <img class="person-img" src="images/is.jpg"/>
-      </li>
-      <li id="p4" class="item" data-page="3">
-        <img class="person-img" src="images/is.jpg"/>
-      </li>
-      <li id="p5" class="item" data-page="4">
-        <img class="person-img" src="images/is.jpg"/>
-      </li>
+      <% for (var i = 0; i < cards.length; i++) { %>
+        <li id="p<%= i + 1%>" class="item <%if (!i) { %>g-active<% } %>" data-page="<%= i %>" style="left: <%= 50 * i%>px">
+          <img class="person-img" src="images/person/<%= cards[i].photo%>.jpg" title="<%= cards[i].photo%>"/>
+        </li>
+      <% } %>
     </ul>
   </nav>
   <div class="snowglobe"></div>

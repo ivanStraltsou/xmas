@@ -50,8 +50,14 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: './images/',
-            src: '*',
+            src: '**',
             dest: './public/images/'
+          },
+          {
+            expand: true,
+            cwd: './files/sounds',
+            src: '*',
+            dest: './public/sounds/'
           },
           {
             expand: true,
